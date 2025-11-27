@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ticket • SmartBus</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">SmartBus</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="history.html">History</a>
+      <a href="track.html">Track</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card ticket">
+    <h2>e-Ticket</h2>
+    <div id="ticketMeta" class="muted"></div>
+    <div class="grid-3" style="align-items:center;margin-top:12px">
+      <div id="ticketDetails"></div>
+      <div>
+        <strong>Passengers</strong>
+        <ul id="ticketPax" class="muted" style="padding-left:18px;margin:8px 0 0"></ul>
+      </div>
+      <div class="qr-wrap">
+        <div id="qrBox" class="qr"></div>
+        <div class="muted" id="ticketCode" style="text-align:center;margin-top:6px"></div>
+      </div>
+    </div>
+    <div class="actions" style="margin-top:12px">
+      <a class="btn" id="downloadTicket">Download</a>
+      <a class="btn" id="trackBtn">Track Bus</a>
+      <a class="btn" href="history.html">Back to History</a>
+    </div>
+  </section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

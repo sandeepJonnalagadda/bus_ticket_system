@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin • Dashboard</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="admin-dashboard.html">SmartBus Admin</a>
+    <nav>
+      <a href="manage-buses.html">Manage Buses</a>
+      <a href="view-bookings.html">View Bookings</a>
+      <button id="adminLogoutBtn" class="btn link">Logout</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Overview</h2>
+    <div class="grid-3">
+      <div class="card stat">
+        <div class="muted">Buses</div>
+        <strong id="countBuses">0</strong>
+      </div>
+      <div class="card stat">
+        <div class="muted">Bookings</div>
+        <strong id="countBookings">0</strong>
+      </div>
+      <div class="card stat">
+        <div class="muted">Users</div>
+        <strong id="countUsers">0</strong>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

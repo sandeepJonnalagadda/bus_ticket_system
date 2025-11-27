@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Bus – Home</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">SmartBus</a>
+    <nav>
+      <a href="search.html">Search</a>
+      <a href="login.html" id="nav-login">Login</a>
+      <a href="dashboard.html" id="nav-dashboard" class="hide">Dashboard</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container hero">
+  <section class="hero-card">
+    <h1>Book. Board. Track.</h1>
+    <p>Digital tickets with seat selection, instant confirmation, and live tracking.</p>
+    <a class="btn primary" href="search.html">Search Buses</a>
+  </section>
+
+  <section class="features">
+    <div class="card">
+      <h3>Online Booking</h3>
+      <p>Search routes, pick seats, pay securely, get e-tickets.</p>
+    </div>
+    <div class="card">
+      <h3>Real-time Tracking</h3>
+      <p>Follow your bus with ETA (demo version).</p>
+      <button id="homeTrackBtn" class="btn">Track a Bus</button>
+    </div>
+
+    <div class="card">
+      <h3>QR-ready Tickets</h3>
+      <p>Each booking gets a code you can verify on-board.</p>
+      <button id="startQrScan" class="btn">Scan Ticket QR</button>
+      <div id="qrScanner" style="display:none; margin-top:10px;"></div>
+      <div id="qrResult" class="muted" style="margin-top:10px;"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>© <span id="year"></span> SmartBus • <a href="admin-login.html" target="_blank">Admin</a></p>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script src="js/main.js"></script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const scanBtn = document.getElementById('startQrScan');
+  const qrScanner = document.getElementById('qrScanner');
+  const qrResult = document.getElementById('qrResult');
+  let html5Qr;
+
+  scanBtn.addEventListener('click', async () => {
+    qrResult.textContent = '';
+    qrScanner.style.display = 'block';
+    scanBtn.disabled = true;
+    if (!html5Qr) {
+      html5Qr = new Html5Qrcode("qrScanner");
+    }
+    html5Qr.start(
+      { facingMode: "environment" },
+      { fps: 10, qrbox: 200 },
+      (decodedText) => {
+        qrResult.textContent = decodedText;
+        html5Qr.stop();
+        qrScanner.style.display = 'none';
+        scanBtn.disabled = false;
+      },
+      (errorMessage) => {
+        // ignore scan errors
+      }
+    ).catch(err => {
+      qrResult.textContent = "Camera error: " + err;
+      scanBtn.disabled = false;
+    });
+  });
+});
+</script>
+</body>
+</html>

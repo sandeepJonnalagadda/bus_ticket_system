@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard • SmartBus</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">SmartBus</a>
+    <nav>
+      <a href="search.html">Search</a>
+      <a href="history.html">History</a>
+      <a href="profile.html">Profile</a>
+      <button id="logoutBtn" class="btn link">Logout</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Hello, <span id="userName">User</span> 👋</h2>
+    <p>Quick actions</p>
+    <div class="actions">
+      <a href="search.html" class="btn">Book a Ticket</a>
+      <a href="history.html" class="btn">View Bookings</a>
+      <a href="track.html" class="btn">Live Tracking</a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h3>Upcoming Trips</h3>
+    <div id="upcomingList" class="list"></div>
+  </section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

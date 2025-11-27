@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profile • SmartBus</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">SmartBus</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="history.html">History</a>
+      <button id="logoutBtn" class="btn link">Logout</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Profile</h2>
+    <form id="profileForm" class="form">
+      <label>Full Name
+        <input type="text" name="name" required/>
+      </label>
+      <label>Email
+        <input type="email" name="email" required/>
+      </label>
+      <button class="btn primary" type="submit">Save</button>
+    </form>
+  </section>
+
+  <section class="card">
+    <h3>Change Password</h3>
+    <form id="pwdForm" class="form">
+      <div class="grid-3">
+        <label>Current
+          <input type="password" name="current" required/>
+        </label>
+        <label>New
+          <input type="password" name="next" minlength="6" required/>
+        </label>
+        <label>Confirm
+          <input type="password" name="confirm" minlength="6" required/>
+        </label>
+      </div>
+      <button class="btn" type="submit">Update Password</button>
+    </form>
+  </section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

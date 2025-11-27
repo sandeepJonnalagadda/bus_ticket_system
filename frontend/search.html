@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search Buses • SmartBus</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">SmartBus</a>
+    <nav>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="history.html">History</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <form class="card form" id="searchForm">
+    <h2>Find your bus</h2>
+    <div class="grid-3">
+      <label>From
+        <input type="text" name="from" list="cityList" required placeholder="Hyderabad"/>
+      </label>
+      <label>To
+        <input type="text" name="to" list="cityList" required placeholder="Bengaluru"/>
+      </label>
+      <label>Date
+        <input type="date" name="date" required id="searchDate"/>
+      </label>
+    </div>
+    <datalist id="cityList">
+      <option>Hyderabad</option><option>Bengaluru</option><option>Chennai</option>
+      <option>Mumbai</option><option>Pune</option><option>Delhi</option>
+      <option>Vizag</option><option>Vijayawada</option><option>Tirupati</option>
+    </datalist>
+    <button class="btn primary" type="submit">Search</button>
+  </form>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

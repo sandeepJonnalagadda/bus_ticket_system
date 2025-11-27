@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment • SmartBus</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">SmartBus</a>
+    <nav>
+      <a href="passenger-details.html">Back</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Review & Pay</h2>
+    <div id="paySummary" class="muted" style="margin-bottom:12px"></div>
+
+    <form id="paymentForm" class="form">
+      <label>Card Number
+        <input type="text" inputmode="numeric" maxlength="19" placeholder="xxxx xxxx xxxx xxxx" required/>
+      </label>
+      <div class="grid-3">
+        <label>Expiry (MM/YY)
+          <input type="text" maxlength="5" placeholder="08/28" required/>
+        </label>
+        <label>CVV
+          <input type="password" inputmode="numeric" maxlength="4" placeholder="***" required/>
+        </label>
+        <label>Name on Card
+          <input type="text" required/>
+        </label>
+      </div>
+      <button class="btn primary" type="submit">Pay Now</button>
+      <p class="muted">Demo only—no real payment is processed.</p>
+    </form>
+  </section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

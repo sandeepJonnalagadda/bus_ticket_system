@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin • Bookings</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="admin-dashboard.html">SmartBus Admin</a>
+    <nav>
+      <a href="manage-buses.html">Manage Buses</a>
+      <button id="adminLogoutBtn" class="btn link">Logout</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>All Bookings</h2>
+    <div id="adminBookings" class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Booking ID</th><th>User</th><th>Route</th><th>Date</th><th>Seats</th><th>Total</th><th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="adminBookingsBody"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

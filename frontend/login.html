@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login • SmartBus</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">SmartBus</a>
+    <nav>
+      <a href="register.html">Register</a>
+      <a href="search.html">Search</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container auth">
+  <form class="card form" id="loginForm">
+    <h2>Welcome back</h2>
+    <label>Email
+      <input type="email" name="email" required />
+    </label>
+    <label>Password
+      <input type="password" name="password" minlength="6" required />
+    </label>
+    <button class="btn primary" type="submit">Login</button>
+    <p class="muted">No account? <a href="register.html">Create one</a></p>
+  </form>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

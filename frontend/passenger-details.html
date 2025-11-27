@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Passenger Details • SmartBus</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">SmartBus</a>
+    <nav>
+      <a href="seat-selection.html">Back</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <form class="card form" id="passengerForm">
+    <h2>Passenger Details</h2>
+    <div id="passengerList"></div>
+    <label>Contact Email
+      <input type="email" name="contactEmail" required />
+    </label>
+    <label>Contact Phone
+      <input type="tel" name="contactPhone" pattern="[0-9]{10}" required placeholder="10-digit number"/>
+    </label>
+    <button class="btn primary" type="submit">Proceed to Payment</button>
+  </form>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

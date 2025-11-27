@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Select Seats • SmartBus</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html">SmartBus</a>
+    <nav>
+      <a href="results.html">Back to Results</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2 id="busTitle">Seat Selection</h2>
+    <p class="muted" id="busMeta"></p>
+
+    <div class="seat-legend">
+      <span class="chip available">Available</span>
+      <span class="chip selected">Selected</span>
+      <span class="chip booked">Booked</span>
+      <span class="chip female">Female Only</span>
+    </div>
+
+    <div id="seatGrid" class="seat-grid"></div>
+
+    <div class="seat-summary">
+      <p>Selected: <span id="selectedSeats">0</span> • Fare: ₹<span id="fareTotal">0</span></p>
+      <button id="proceedPassenger" class="btn primary" disabled>Continue</button>
+    </div>
+  </section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

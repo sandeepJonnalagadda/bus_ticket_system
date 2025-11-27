@@ -1,0 +1,29 @@
+# Node
+backend/node_modules
+npm-debug.log*
+yarn-error.log*
+
+# dotenv
+.env
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# build
+dist/
+build/
+
+# logs
+logs
+*.log
+
+# Temporary files
+*~
+*.swp
+tmp/

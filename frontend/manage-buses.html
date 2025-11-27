@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin • Manage Buses</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="admin-dashboard.html">SmartBus Admin</a>
+    <nav>
+      <a href="admin-dashboard.html">Dashboard</a>
+      <a href="view-bookings.html">Bookings</a>
+      <button id="adminLogoutBtn" class="btn link">Logout</button>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="card">
+    <h2>Buses</h2>
+    <div id="busList" class="list"></div>
+  </section>
+
+  <section class="card">
+    <h3 id="busFormTitle">Add Bus</h3>
+    <form id="busForm" class="form">
+      <div class="grid-3">
+        <label>Bus Name <input name="name" required/></label>
+        <label>Type <input name="type" placeholder="AC Seater / Sleeper" required/></label>
+        <label>Operator <input name="operator" required/></label>
+      </div>
+      <div class="grid-3">
+        <label>From <input name="from" required/></label>
+        <label>To <input name="to" required/></label>
+        <label>Fare (₹) <input name="fare" type="number" min="1" required/></label>
+      </div>
+      <div class="grid-3">
+        <label>Departure <input name="dep" placeholder="22:00" required/></label>
+        <label>Arrival <input name="arr" placeholder="06:30" required/></label>
+        <label>Duration <input name="duration" placeholder="8h 30m" required/></label>
+      </div>
+      <label>Seat Count <input name="seats" type="number" min="10" max="60" required/></label>
+      <input type="hidden" name="id" id="busIdInput">
+      <div class="actions">
+        <button class="btn primary" type="submit">Save</button>
+        <button class="btn" type="button" id="resetBusForm">Reset</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+:root{
+  --bg:#0b0f14; --card:#101622; --muted:#9fb0c6; --txt:#e8f0ff;
+  --accent:#7aa2ff; --accent2:#36d399; --danger:#ff6b6b; --warn:#f6c945;
+  --ring: rgba(122,162,255,.35);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:linear-gradient(180deg,#0b0f14,#0b0f14 40%,#0e1420);color:var(--txt);font:400 16px/1.5 system-ui,Segoe UI,Roboto,Arial}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.hide{display:none}
+
+.container{max-width:1000px;margin:0 auto;padding:16px}
+.site-header{position:sticky;top:0;background:rgba(11,15,20,.7);backdrop-filter: blur(8px);border-bottom:1px solid #1b2436;z-index:5}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:800;letter-spacing:.3px;font-size:20px}
+
+.hero{display:grid;gap:16px}
+.hero-card{background:linear-gradient(180deg,#111a2a,#0f1827);border:1px solid #1c2740;border-radius:16px;padding:32px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.hero h1{font-size:36px;margin:0 0 8px}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid #1b2436;border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.list{display:grid;gap:12px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.muted{color:var(--muted)}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid #22304c;background:#121a2b;color:var(--txt);padding:10px 14px;border-radius:12px;cursor:pointer;transition:.2s all}
+.btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.btn.primary{background:linear-gradient(90deg,#628aff,#56d8a1);border-color:transparent;color:#0a0f18}
+.btn.link{background:transparent;border:none;color:var(--muted);padding:6px 8px}
+
+.form label{display:grid;gap:6px;margin:10px 0}
+.form input,.form select{background:#0f1730;color:var(--txt);border:1px solid #22304c;border-radius:10px;padding:10px;outline:2px solid transparent;transition:.2s outline}
+.form input:focus{outline:2px solid var(--ring)}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+
+.seat-legend{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.chip{display:inline-block;padding:4px 10px;border-radius:999px;border:1px solid #243252;background:#0f1730;color:var(--muted);font-size:12px}
+.chip.available{border-color:#2a3a66}
+.chip.selected{border-color:#2f7bff;color:#b7cbff}
+.chip.booked{border-color:#5a2a2a;color:#ff9898}
+.chip.female{border-color:#7e2a60;color:#ffb4e0}
+
+.seat-grid{display:grid;grid-template-columns:repeat(4,48px);gap:10px;justify-content:center;margin:16px 0}
+.seat{width:48px;height:48px;border-radius:10px;border:1px solid #2a3a66;background:#0f1730;display:flex;align-items:center;justify-content:center;cursor:pointer;user-select:none}
+.seat.booked{background:#270f14;border-color:#5a2a2a;color:#ff9a9a;cursor:not-allowed}
+.seat.female{outline:2px dashed #7e2a60}
+.seat.selected{background:#0f1f3a;border-color:#2f7bff;box-shadow:0 0 0 3px rgba(98,138,255,.2)}
+
+.seat-summary{display:flex;align-items:center;justify-content:space-between;margin-top:8px}
+
+.auth{display:grid;place-items:center;min-height:65vh}
+
+.site-footer{border-top:1px solid #1b2436;margin-top:32px}
+.site-footer p{color:var(--muted)}
+
+
+
+
+/* tables & ticket & map */
+.table-wrap{overflow:auto}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border-bottom:1px solid #1b2436;padding:8px 10px;text-align:left}
+.table th{color:var(--muted);font-weight:600}
+
+.ticket .qr-wrap{display:flex;flex-direction:column;align-items:center}
+.qr{display:inline-block;border:1px solid #22304c;border-radius:12px;padding:8px;background:#0b1224}
+
+.map{position:relative;height:220px;border:1px solid #1b2436;border-radius:12px;background:linear-gradient(180deg,#09121f,#0b1626)}
+.map .route{position:absolute;left:6%;top:50%;right:6%;height:4px;background:#22304c;border-radius:4px;transform:translateY(-50%)}
+.map .bus-dot{position:absolute;top:50%;left:0%;width:16px;height:16px;border-radius:50%;background:#7aa2ff;transform:translate(-50%,-50%);box-shadow:0 0 0 4px rgba(122,162,255,.25)}
+
+.progress{height:8px;background:#101622;border:1px solid #1b2436;border-radius:999px;margin-top:10px;overflow:hidden}
+.progress #progressBar{height:100%;width:0%;background:linear-gradient(90deg,#628aff,#56d8a1)}
+
+
+.qr-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#ticketCode {
+  text-align: center;
+  margin-top: 6px;
+}
+.ticket {
+  text-align: left; /* or center if you want all content centered */
+}
+
+#map {
+  width: 100%;
+  height: 400px;   /* must be set */
+  border-radius: 12px;
+  margin: 16px 0;
+}
