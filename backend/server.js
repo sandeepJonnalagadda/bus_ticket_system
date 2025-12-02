@@ -5,12 +5,34 @@ const cors = require('cors');
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:8000",
+  "https://bus-ticket-system-omega.vercel.app",   // your Vercel production domain
+  "https://bus-ticket-system-w7wd.onrender.com"  // optional
+];
+
 // Middleware
 // app.use(cors()); // for deployment
+// app.use(cors({
+//   origin: process.env.FRONTEND_URL || "http://localhost:8000",
+//   credentials: true
+// }));
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:8000",
-  credentials: true
+  origin: function (origin, callback) {
+    // Allow server-side requests or tools like curl/postman
+    if (!origin) return callback(null, true);
+
+    if (allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+
+    console.log("❌ BLOCKED ORIGIN:", origin);  // useful for debugging
+    return callback(new Error("CORS Not Allowed"), false);
+  },
+  credentials: true,
 }));
+
+
 app.use(express.json());
 
 // Connect to MongoDB
