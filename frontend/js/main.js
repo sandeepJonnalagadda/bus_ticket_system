@@ -3,7 +3,8 @@
 // ---------- helpers ----------
 const $ = (q, root = document) => root.querySelector(q);
 const $$ = (q, root = document) => [...root.querySelectorAll(q)];
-const API_URL = 'http://localhost:5000/api';
+// const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://bus-ticket-system-w7wd.onrender.com/api';
 const fmtINR = (n) => new Intl.NumberFormat('en-IN').format(n);
 
 // Helper for temporary data between pages
