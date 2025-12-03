@@ -153,23 +153,4 @@ If you like this project, please ⭐ star the repository!
 
 ---
 
-# ✅ IMPORTANT  
-👉 **Paste this only in GitHub README.md editor**, NOT in Word or Notepad.
 
-Then GitHub will automatically show:
-
-- ✔ Headings  
-- ✔ Bold text  
-- ✔ Code blocks  
-- ✔ Tables  
-- ✔ Icons  
-
----
-
-If you want, I can also:
-
-✅ Generate a README banner image  
-✅ Add shields.io badges  
-✅ Add screenshots section  
-✅ Add an architecture diagram  
-Just tell me!
