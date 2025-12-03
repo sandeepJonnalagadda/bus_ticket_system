@@ -1,96 +1,175 @@
 # 🚌 Smart Bus Ticket System
 
-A full-stack web application that allows users to book bus tickets, manage bookings, and handle admin operations.  
-This project is developed as part of the Software Engineering course and demonstrates proper modular design, API development, and frontend integration.
+A **fully deployed full-stack web application** that allows users to **book bus tickets**, **track buses live**, and **verify tickets using QR codes**, while administrators manage buses, routes, and schedules through a dedicated dashboard.
+
+This project demonstrates complete end-to-end development using **Node.js, Express, MongoDB Atlas, Google Maps API, Vercel, and Render**.
 
 ---
 
-## 🚀 Features
+# 🌐 Live Application
 
-### 🔹 User Features
-- User Registration & Login (JWT Authentication)
-- Browse available buses
+| Component | URL |
+|----------|------|
+| **Frontend (Vercel)** | https://bus-ticket-system-omega.vercel.app |
+| **Backend (Render)** | https://bus-ticket-system-w7wd.onrender.com |
+| **Repository** | https://github.com/sandeepJonnalagadda/bus_ticket_system |
+
+✔ Always accessible  
+✔ Backend may take a few seconds to wake up (Render free tier)
+
+---
+
+# 🚀 Features
+
+## 🔹 User Features
+- User Registration & Login (JWT)
+- Browse and search buses
 - Book tickets
 - View booking history
-- live tracking
-- QR based verification
+- **Live bus tracking using Google Maps API**
+- **QR code–based ticket verification**
 
-### 🔹 Admin Features
-- Add, update, and delete buses
-- Manage routes
-- View all bookings
-- Admin dashboard with controls
+## 🔹 Admin Features
+- Add, edit, delete buses
+- Manage routes and schedules
+- View all user bookings
+- Admin dashboard
 
-### 🔹 System Features
-- REST APIs built using Express.js
-- MongoDB database integration (Mongoose)
+## 🔹 System Features
+- REST APIs with Express.js
+- MongoDB Atlas cloud storage
 - Secure password hashing (bcrypt)
-- JWT-based token authentication
-- Nodemon for automatic development reloads
+- JWT authentication
+- Google Maps JavaScript & Directions API
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
-### **Frontend**
-- HTML5  
-- CSS3  
+## 🌐 Frontend
+- HTML
+- CSS
 - JavaScript
+- Google Maps JavaScript API
 
-### **Backend**
-- Node.js  
-- Express.js  
-- MongoDB (Mongoose)  
-- JSON Web Tokens  
-- BcryptJS  
+## 🧩 Backend
+- Node.js
+- Express.js
+- MongoDB (Mongoose)
+- JWT
+- Bcrypt
+
+## ☁ Deployment
+- **Frontend:** Vercel  
+- **Backend:** Render  
+- **Database:** MongoDB Atlas  
+- **Maps:** Google Maps API  
 
 ---
 
-## 📁 Folder Structure
+# 📁 Project Structure
 
 bus_ticket_system/
 │
-├── frontend/
-│ ├── index.html
-│ ├── css/
-│ ├── js/
-│ └── pages/
-│
-├── backend/
-│ ├── server.js
-│ ├── controllers/
-│ ├── routes/
-│ ├── models/
-│ ├── middleware/
-│ ├── config/
-│ ├── package.json
-│ └── .env (ignored)
-│
+├── frontend
+├── backend
 └── README.md
+
 
 ---
 
-### 🔧 Backend Setup
+# ⚙️ Local Development Setup
 
-1. Go to backend folder:
-cd backend,
-npm install,
-npm run dev
+## 1️⃣ Backend Setup
 
-### 🎨 Frontend Setup
+- cd backend
+- npm install
+- npm run dev
+- http://localhost:5000
 
-2. Go to frontend folder:(open in new terminal/CLP/PS)
-cd frontend,
-python -m http.server 8000
+## 2️⃣ Frontend Setup
 
+- cd frontend
+- python -m http.server 8000
+- http://localhost:8000
 
-🤝 Contributing
-Pull requests and improvements are welcome.
+# 🚀 Deployment Guide (Completed)
+## 1️⃣ Backend on Render
+### Environment Variables:
+- PORT=5000
+- MONGODB_URI=your_mongodb_atlas_url
+- JWT_SECRET=your_secret
+- NODE_ENV=production
+- FRONTEND_URL=https://bus-ticket-system-omega.vercel.app
 
-🧑‍💻 Author
+### Commands:
+- Build:  npm install
+- Start:  npm start
+
+### Backend URL:
+- https://bus-ticket-system-w7wd.onrender.com
+
+## 2️⃣ Frontend on Vercel
+- Root Directory:frontend
+- const API_URL = "https://bus-ticket-system-w7wd.onrender.com/api";
+
+---
+
+## 3️⃣ Google Maps API Setup
+### Enable:
+- Maps JavaScript API
+- Directions API
+
+### Allowed Referrers:
+- https://bus-ticket-system-omega.vercel.app/*
+- http://localhost:8000/*
+
+---
+
+# 🌍 After Deployment (Live Behavior)
+
+✔ Frontend always online
+
+✔ Backend wakes from sleep automatically
+
+✔ Live tracking fully functional
+
+✔ QR verification works online
+
+✔ MongoDB Atlas stores all production data
+
+# 🤝 Contributing
+
+Pull requests and improvements are welcome!
+
+# 👨‍💻 Author
+
 Sandeep Jonnalagadda
 GitHub: https://github.com/sandeepJonnalagadda
 
-⭐ Support
-If you like this project, please consider giving it a star ⭐ on GitHub!
-# 🎉 Done!
+# ⭐ Support
+
+If you like this project, please ⭐ star the repository!
+
+---
+
+# ✅ IMPORTANT  
+👉 **Paste this only in GitHub README.md editor**, NOT in Word or Notepad.
+
+Then GitHub will automatically show:
+
+- ✔ Headings  
+- ✔ Bold text  
+- ✔ Code blocks  
+- ✔ Tables  
+- ✔ Icons  
+
+---
+
+If you want, I can also:
+
+✅ Generate a README banner image  
+✅ Add shields.io badges  
+✅ Add screenshots section  
+✅ Add an architecture diagram  
+Just tell me!
